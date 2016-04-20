@@ -1,0 +1,22 @@
+﻿@model travel_blog.Models.Experience
+
+<html>
+<head>
+    <title>Travel Blog - Create</title>
+</head>
+<body>
+    <h2>Create</h2>
+    <hr />
+    <h4>Add a new experience</h4>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Description)
+        @Html.TextBoxFor(model => model.Description)
+
+        @Html.LabelFor(model => model.LocationId)
+        @Html.TextBoxFor(model => model.LocationId)
+        <input type="submit" value="Add new experience" />
+    }
+    <p>@Html.ActionLink("Back to list", "Index")</p>
+</body>
+</html>

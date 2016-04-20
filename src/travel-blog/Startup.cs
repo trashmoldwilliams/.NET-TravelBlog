@@ -8,9 +8,9 @@ using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Data.Entity;
-using travel_blog.Models;
+using TravelBlog.Models;
 
-namespace travel_blog
+namespace TravelBlog
 {
     public class Startup
     {

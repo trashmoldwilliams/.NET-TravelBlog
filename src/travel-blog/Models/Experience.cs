@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TravelBlog.Models;
 
-namespace travel_blog.Models
+namespace TravelBlog.Models
 {
     [Table("Experiences")]
     public class Experience

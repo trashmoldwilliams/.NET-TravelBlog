@@ -1,4 +1,4 @@
-﻿@model travel_blog.Models.Experience
+﻿@model TravelBlog.Models.Experience
 
 <html>
 <head>
@@ -14,7 +14,7 @@
         @Html.TextBoxFor(model => model.Description)
 
         @Html.LabelFor(model => model.LocationId)
-        @Html.TextBoxFor(model => model.LocationId)
+        @Html.DropDownList("LocationId")
         <input type="submit" value="Add new experience" />
     }
     <p>@Html.ActionLink("Back to list", "Index")</p>

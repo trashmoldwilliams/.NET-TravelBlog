@@ -1,0 +1,15 @@
+﻿@model TravelBlog.Models.Person
+
+<html>
+<head>
+    <title>Travel Blog - Details</title>
+</head>
+<body>
+    <h2>Details</h2>
+    <hr />
+    <p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
+    <p>@Html.DisplayNameFor(model => model.ExperienceId) : @Html.DisplayFor(model => model.ExperienceId)</p>
+
+    <p>@Html.ActionLink("Back to List", "Index")</p>
+</body>
+</html>

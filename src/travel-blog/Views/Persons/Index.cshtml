@@ -1,16 +1,33 @@
 ﻿@model IEnumerable<TravelBlog.Models.Person>
 
-<html>
-<head>
-    <title>Travel Blog</title>
-</head>
-<body>
-    <h2>Travel Blog</h2>
-    <ul>
-        @foreach (var listItem in Model)
-        {
-            <li>@Html.DisplayFor(modelItem => listItem.Name)</li>
-        }
-    </ul>
-</body>
-</html>
+<h2>To Do List</h2>
+<hr />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Experience.Description)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var listItem in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => listItem.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => listItem.Experience.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = listItem.PersonId })
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>

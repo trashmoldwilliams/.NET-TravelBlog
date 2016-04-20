@@ -1,0 +1,16 @@
+﻿@model IEnumerable<TravelBlog.Models.Person>
+
+<html>
+<head>
+    <title>Travel Blog</title>
+</head>
+<body>
+    <h2>Travel Blog</h2>
+    <ul>
+        @foreach (var listItem in Model)
+        {
+            <li>@Html.DisplayFor(modelItem => listItem.Name)</li>
+        }
+    </ul>
+</body>
+</html>

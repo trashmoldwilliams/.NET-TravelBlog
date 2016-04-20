@@ -1,12 +1,10 @@
-﻿<html>
-<head>
-    <title>Travel Blog</title>
-</head>
-<body>
+﻿@{ 
+    ViewData["Title"] = "To Do List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
     <h2>Welcome to the Travel Blog!</h2>
     <p>@Html.ActionLink("All Locations", "Index", "Locations")</p>
     <p>@Html.ActionLink("All Experiences", "Index", "Experiences")</p>
     <p>@Html.ActionLink("All People", "Index", "Persons")</p>
     
-</body>
-</html>

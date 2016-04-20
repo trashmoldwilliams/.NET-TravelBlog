@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using TravelBlog.Models;
 using Microsoft.AspNet.Mvc.Rendering;
+using Microsoft.Data.Entity;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,6 +23,9 @@ namespace TravelBlog.Controllers
         public IActionResult Details(int id)
         {
             var thisPerson = db.Persons.FirstOrDefault(Persons => Persons.PersonId == id);
+            Experience newExperience = db.Experiences.FirstOrDefault(x => x.ExperienceId == id);
+            thisPerson.Experience = newExperience;
+                
             return View(thisPerson);
         }
 
